@@ -17,7 +17,7 @@ int main(void) {
         //FADE-OUT
         float linear_out = 1 - linear_in;
         float half_sine_out = 1 - half_sine_in;
-        float log_out = 1 - log_fade_in;
+        float log_out = 1 - log_in;
     }
 }
 ```
