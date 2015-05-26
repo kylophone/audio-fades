@@ -10,7 +10,7 @@ LINEAR_OUT
 HALF_SINE_OUT
 LOG_OUT
 ```
-### example
+### example.c
 ```c
 #include <stdio.h>
 #include "fades.h"
