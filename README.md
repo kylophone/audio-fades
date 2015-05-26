@@ -1,6 +1,16 @@
 # audio-fades
 Example audio fades. Linear, log, and half-sine.
 
+### fade-types
+```c
+LINEAR_IN
+HALF_SINE_IN
+LOG_IN
+LINEAR_OUT
+HALF_SINE_OUT
+LOG_OUT
+```
+### example
 ```c
 #include <stdio.h>
 #include "fades.h"
