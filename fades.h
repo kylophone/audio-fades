@@ -1,6 +1,5 @@
 #include <math.h>
 
-
 #define LINEAR_IN 0
 #define HALF_SINE_IN 1
 #define LOG_IN 2
