@@ -3,21 +3,14 @@ Example audio fades. Linear, log, and half-sine.
 
 ```c
 #include <stdio.h>
-#include <math.h>
+#include "fades.h"
 
-#define NUM_SAMPLES 48000 
+#define FADE_LENGTH 48000
 
 int main(void) {
-    for(int i = 0; i <= NUM_SAMPLES; i++) {
-        //FADE-IN
-        float linear_in = (float) i / NUM_SAMPLES;
-        float half_sine_in = sin(M_PI / 2 * i / NUM_SAMPLES);
-        float log_in = log(1 + (((float) i / NUM_SAMPLES) * (M_E - 1)));
-
-        //FADE-OUT
-        float linear_out = 1.0 - linear_in;
-        float half_sine_out = 1.0 - half_sine_in;
-        float log_out = 1.0 - log_in;
+    for(int i = 0; i < FADE_LENGTH; i++) {
+        printf("%.10f\n", fade_envelope(LOG_IN, FADE_LENGTH - 1, i));
     }
+    return 0;
 }
 ```
